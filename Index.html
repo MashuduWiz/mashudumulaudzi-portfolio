@@ -17,9 +17,9 @@
   <body>
     <header class="header">
       <div class="header__socials">
-        <a href="#"><i class="ri-mail-fill"></i></a>
-        <a href="#"><i class="ri-github-fill"></i></a>
-        <a href="#"><i class="ri-linkedin-fill"></i></a>
+        <a href="mailto:mulaudzimash12@gmail.com"><i class="ri-mail-fill"></i></a>
+        <a href="https://github.com/MashuduWiz"><i class="ri-github-fill"></i></a>
+        <a href="https://www.linkedin.com/in/mashudu-mulaudzi-00a325256/"><i class="ri-linkedin-fill"></i></a>
       </div>
       <nav>
         <div class="nav__bar">
@@ -59,7 +59,7 @@
 
     <section class="section__container about__container" id="about">
       <div class="about__image">
-        <img src="Images/cool.jpeg" alt="about" />
+        <img src="Images/Mashudu.jpeg" alt="about" />
       </div>
       <div class="about__content">
         <h2 class="section__header">Hi There I Am Mashudu</h2>
@@ -74,12 +74,12 @@
            Constant learning and experimenting with new tools keeps my work fresh and innovative.
         </h4>
         <div class="about__btns">
-          <a href="assets/Andarson_CV.pdf" download class="download__btn">
+          <a href="Images/Mashudu CV.pdf" download class="download__btn">
             Download CV
           </a>
-          <a href="#"><i class="ri-mail-fill"></i></a>
-          <a href="#"><i class="ri-github-fill"></i></a>
-          <a href="#"><i class="ri-linkedin-fill"></i></a>
+          <a href="mailto:mulaudzimash12@gmail.com"><i class="ri-mail-fill"></i></a>
+          <a href="https://github.com/MashuduWiz"><i class="ri-github-fill"></i></a>
+          <a href="https://www.linkedin.com/in/mashudu-mulaudzi-00a325256/"><i class="ri-linkedin-fill"></i></a>
         </div>
       </div>
     </section>
@@ -119,137 +119,297 @@
 
     <section class="section__container project__container" id="project">
       <div class="project__header">
-        <h2 class="section__header">My Projects</h2>
-        <div class="project__nav">
-          <button
-            class="btn project__btn mixitup-control-active"
-            data-filter="all"
-          >
-            All
-          </button>
-          <button class="btn project__btn" data-filter=".web">Web Apps</button>
-          <button class="btn project__btn" data-filter=".game">Games</button>
-          <button class="btn project__btn" data-filter=".design">
-            Designs
-          </button>
+        <h2 class="section__header project__title">My Projects</h2>
+        <div class="project__filters">
+          <button class="project__filter-btn active" data-filter="all">All</button>
+          <button class="project__filter-btn" data-filter="web-app">Web Apps</button>
+          <button class="project__filter-btn" data-filter="game">Games</button>
+          <button class="project__filter-btn" data-filter="design">Designs</button>
         </div>
       </div>
-      <div class="project__grid">
-        <div class="project__card mix web">
-          <img src="Images/Screenshot 2025-09-05 141130.png" alt="project" />
-          <div class="project-overlay">
-            <h3 class="project-title">E-Commerce Website</h3>
-            <p class="project-desc">A full-stack e-commerce platform with user authentication, payment integration, and admin dashboard.</p>
-            <div class="project-links">
-              <a href="#" target="_blank">Live Demo</a>
-              <a href="#" target="_blank">GitHub</a>
+
+      <div class="project__grid" id="projects-grid">
+        <article class="project__card" data-cat="web-app">
+          <div class="project__card-media">
+            <img
+              src="Images/Rivoni home page.png"
+              alt="Rivoni Society for the Blind Website screenshot"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+            />
+            <div class="project__media-placeholder" style="display: none">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+              Add your screenshot here
+            </div>
+            <span class="project__status-badge project__status-badge--live">Live</span>
+          </div>
+          <div class="project__card-body">
+            <h3 class="project__card-title">Rivoni Society for the Blind Website</h3>
+            <p class="project__card-desc">A website for the Rivoni Society for the Blind, a non-profit organization that provides education and training to the blind and visually impaired.</p>
+            <div class="project__tags">
+              <span class="project__tag">HTML</span>
+              <span class="project__tag">CSS</span>
+              <span class="project__tag">JavaScript</span>
+              <span class="project__tag">Bootstrap</span>
+            </div>
+            <div class="project__card-actions">
+              <a href="#" class="project__action-btn project__action-btn--primary" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                Live Demo
+              </a>
+              <a href="#" class="project__action-btn" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                GitHub
+              </a>
             </div>
           </div>
-        </div>
-        <div class="project__card mix game">
-          <img src="Images/Screenshot 2025-09-05 141101.png" alt="project" />
-          <div class="project-overlay">
-            <h3 class="project-title">Interactive Game</h3>
-            <p class="project-desc">A JavaScript-based interactive game with modern UI and engaging gameplay mechanics.</p>
-            <div class="project-links">
-              <a href="#" target="_blank">Play Game</a>
-              <a href="#" target="_blank">GitHub</a>
+        </article>
+
+        <article class="project__card" data-cat="web-app">
+          <div class="project__card-media project__card-media--slideshow">
+            <div class="project__slideshow" data-autoplay="5000">
+              <div class="project__slideshow-track">
+                <div class="project__slide is-active">
+                  <img
+                    src="Images/Screenshot 2025-09-05 141012.png"
+                    alt="Inventory Management website — dashboard view"
+                  />
+                </div>
+                <div class="project__slide">
+                  <img
+                    src="Images/Screenshot 2025-09-05 141130.png"
+                    alt="Inventory Management website — inventory list"
+                  />
+                </div>
+                <div class="project__slide">
+                  <img
+                    src="Images/Screenshot 2025-09-05 141101.png"
+                    alt="Inventory Management website — reports view"
+                  />
+                </div>
+              </div>
+              <button
+                type="button"
+                class="project__slideshow-btn project__slideshow-btn--prev"
+                aria-label="Previous screenshot"
+              >
+                <i class="ri-arrow-left-s-line"></i>
+              </button>
+              <button
+                type="button"
+                class="project__slideshow-btn project__slideshow-btn--next"
+                aria-label="Next screenshot"
+              >
+                <i class="ri-arrow-right-s-line"></i>
+              </button>
+              <div class="project__slideshow-dots" role="tablist" aria-label="Screenshot slides"></div>
+            </div>
+            <span class="project__status-badge project__status-badge--live">Live</span>
+          </div>
+          <div class="project__card-body">
+            <h3 class="project__card-title">Inventory Management System (Web Dashboard)</h3>
+            <p class="project__card-desc">Developed a web-based inventory management system using Vue.js and Firebase. The system supports real-time data updates and integrates with mobile applications for cross-platform functionality.</p>
+            <div class="project__tags">
+              <span class="project__tag">HTML</span>
+              <span class="project__tag">CSS</span>
+              <span class="project__tag">JavaScript</span>
+              <span class="project__tag">Vue.js</span>
+            </div>
+            <div class="project__card-actions">
+              <a href="#" class="project__action-btn project__action-btn--primary" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                Live Demo
+              </a>
+              <a href="#" class="project__action-btn" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                GitHub
+              </a>
             </div>
           </div>
-        </div>
-        <div class="project__card mix design">
-          <img src="assets/project-3.jpg" alt="project" />
-          <div class="project-overlay">
-            <h3 class="project-title">UI/UX Design</h3>
-            <p class="project-desc">Modern and responsive design mockups created with attention to user experience.</p>
-            <div class="project-links">
-              <a href="#" target="_blank">View Design</a>
-              <a href="#" target="_blank">Behance</a>
+        </article>
+
+        <article class="project__card" data-cat="web-app">
+          <div class="project__card-media">
+            <img
+              src="Images/Screenshot 2025-09-05 141012.png"
+              alt="Portfolio Website screenshot"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+            />
+            <div class="project__media-placeholder" style="display: none">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+              Add your screenshot here
+            </div>
+            <span class="project__status-badge project__status-badge--wip">In Progress</span>
+          </div>
+          <div class="project__card-body">
+            <h3 class="project__card-title">Inventory Management Mobile App (Ionic)</h3>
+            <p class="project__card-desc">Built a cross-platform mobile app using Ionic and TypeScript for an inventory management system. The app connects to the web platform and syncs data in real time using APIs and Firebase.</p>
+            <div class="project__tags">
+              <span class="project__tag">HTML</span>
+              <span class="project__tag">CSS</span>
+              <span class="project__tag">TypeScript</span>
+              <span class="project__tag">Ionic</span>
+            </div>
+            <div class="project__card-actions">
+              <a href="#" class="project__action-btn project__action-btn--primary" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                Live Demo
+              </a>
+              <a href="#" class="project__action-btn" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                GitHub
+              </a>
             </div>
           </div>
-        </div>
-        <div class="project__card mix web">
-          <img src="Images/Screenshot 2025-09-05 141012.png" alt="project" />
-          <div class="project-overlay">
-            <h3 class="project-title">Portfolio Website</h3>
-            <p class="project-desc">A responsive portfolio website showcasing projects and skills with smooth animations.</p>
-            <div class="project-links">
-              <a href="#" target="_blank">Live Demo</a>
-              <a href="#" target="_blank">GitHub</a>
+        </article>
+
+        <article class="project__card" data-cat="game">
+          <div class="project__card-media">
+            <img
+              src="Images/Screenshot 2025-09-05 141101.png"
+              alt="Interactive Game screenshot"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+            />
+            <div class="project__media-placeholder" style="display: none">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+              Add your screenshot here
+            </div>
+            <span class="project__status-badge project__status-badge--live">Live</span>
+          </div>
+          <div class="project__card-body">
+            <h3 class="project__card-title">Interactive Game</h3>
+            <p class="project__card-desc">A JavaScript-based interactive game with modern UI, engaging gameplay mechanics, and smooth drag-and-drop controls.</p>
+            <div class="project__tags">
+              <span class="project__tag">HTML5</span>
+              <span class="project__tag">CSS3</span>
+              <span class="project__tag">JavaScript</span>
+            </div>
+            <div class="project__card-actions">
+              <a href="#" class="project__action-btn project__action-btn--primary" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                Play Now
+              </a>
+              <a href="#" class="project__action-btn" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                GitHub
+              </a>
             </div>
           </div>
-        </div>
-        <div class="project__card mix game">
-          <img src="assets/project-5.jpg" alt="project" />
-          <div class="project-overlay">
-            <h3 class="project-title">Mobile Game</h3>
-            <p class="project-desc">Cross-platform mobile game developed with modern frameworks and responsive design.</p>
-            <div class="project-links">
-              <a href="#" target="_blank">Download</a>
-              <a href="#" target="_blank">GitHub</a>
+        </article>
+
+        <article class="project__card" data-cat="design">
+          <div class="project__card-media">
+            <img
+              src="assets/project-3.jpg"
+              alt="UI/UX Design screenshot"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+            />
+            <div class="project__media-placeholder" style="display: none">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+              Add your screenshot here
+            </div>
+            <span class="project__status-badge project__status-badge--live">Live</span>
+          </div>
+          <div class="project__card-body">
+            <h3 class="project__card-title">Mobile App UI Design</h3>
+            <p class="project__card-desc">A complete design system and high-fidelity prototype for a fitness tracking app — including component library, dark mode, and interactive Figma prototype.</p>
+            <div class="project__tags">
+              <span class="project__tag">Figma</span>
+              <span class="project__tag">UI/UX</span>
+              <span class="project__tag">Prototyping</span>
+            </div>
+            <div class="project__card-actions">
+              <a href="#" class="project__action-btn project__action-btn--primary" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                View Design
+              </a>
             </div>
           </div>
-        </div>
-        <div class="project__card mix design">
-          <img src="assets/project-6.jpg" alt="project" />
-          <div class="project-overlay">
-            <h3 class="project-title">Brand Identity</h3>
-            <p class="project-desc">Complete brand identity design including logo, color scheme, and marketing materials.</p>
-            <div class="project-links">
-              <a href="#" target="_blank">View Portfolio</a>
-              <a href="#" target="_blank">Dribbble</a>
-            </div>
-          </div>
-        </div>
+        </article>
+
+        <p class="project__empty" id="projects-empty">No projects in this category yet.</p>
       </div>
     </section>
 
     <section class="section__container service__container" id="service">
       <p class="section__subheader">My Skills</p>
-      <h2 class="section__header">What I Do?</h2>
+      <h2 class="section__header">Core Technical Skills</h2>
       <p class="section__description">
-        I specialize in a wide range of web development services designed to
-        transform your vision into reality.
+        A full-stack toolkit spanning web, mobile, desktop, databases, and
+        integrated systems — built to ship real products end to end.
       </p>
       <div class="service__grid">
         <div class="service__card">
-          <span><i class="ri-window-fill"></i></span>
-          <h4>Web Development</h4>
+          <span><i class="ri-layout-masonry-line"></i></span>
+          <h4>Frontend Development</h4>
           <p>
-            I build responsive, performant websites and web applications using
-            modern front-end and back-end technologies.
+            HTML, CSS, JavaScript, Vue.js, React (JSX) — building responsive
+            and interactive user interfaces for web applications.
           </p>
         </div>
         <div class="service__card">
-          <span><i class="ri-smartphone-line"></i></span>
-          <h4>Mobile Development</h4>
+          <span><i class="ri-server-line"></i></span>
+          <h4>Backend Development</h4>
           <p>
-            From iOS to Android, I create apps that deliver seamless
-            performance and keep users coming back for more.
-          </p>
-        </div>
-        <div class="service__card">
-          <span><i class="ri-code-s-slash-line"></i></span>
-          <h4>Software Development</h4>
-          <p>
-            I design and develop scalable software solutions tailored to your
-            business needs, from desktop apps to enterprise systems.
+            PHP, Java (Servlets/JSP) — server-side logic, authentication
+            systems, and application processing.
           </p>
         </div>
         <div class="service__card">
           <span><i class="ri-database-2-line"></i></span>
           <h4>Database Management</h4>
           <p>
-            I design, optimize, and maintain databases to ensure your data is
-            secure, organized, and ready for high-performance applications.
+            MySQL, Firebase, SQLite — relational and NoSQL database design,
+            real-time data handling, and local storage solutions.
           </p>
         </div>
         <div class="service__card">
-          <span><i class="ri-shield-check-line"></i></span>
-          <h4>Network Security</h4>
+          <span><i class="ri-smartphone-line"></i></span>
+          <h4>Mobile &amp; Cross-Platform Development</h4>
           <p>
-            I help protect your systems and data with security best practices,
-            vulnerability assessment, and secure architecture design.
+            Android development using Java (Android Studio), Ionic Framework
+            (TypeScript) — building mobile applications and integrating them
+            with web systems.
+          </p>
+        </div>
+        <div class="service__card">
+          <span><i class="ri-computer-line"></i></span>
+          <h4>Desktop Application Development</h4>
+          <p>
+            Electron.js with React — building cross-platform desktop
+            applications (currently working on a Church Admin System).
+          </p>
+        </div>
+        <div class="service__card">
+          <span><i class="ri-links-line"></i></span>
+          <h4>API &amp; Third-Party Integration</h4>
+          <p>
+            REST API integration, Google Maps API — connecting applications
+            with external services and enabling location-based features.
+          </p>
+        </div>
+        <div class="service__card">
+          <span><i class="ri-global-line"></i></span>
+          <h4>CMS &amp; Website Development</h4>
+          <p>
+            WordPress — website setup, customization, and content management
+            system usage.
+          </p>
+        </div>
+        <div class="service__card">
+          <span><i class="ri-stack-line"></i></span>
+          <h4>Full-Stack &amp; System Integration</h4>
+          <p>
+            Experience building integrated systems combining frontend
+            (Vue/React), backend (PHP/Java), and databases
+            (Firebase/MySQL/SQLite) across web, mobile, and desktop platforms.
+          </p>
+        </div>
+        <div class="service__card">
+          <span><i class="ri-git-branch-line"></i></span>
+          <h4>Version Control &amp; Tools</h4>
+          <p>
+            Git &amp; GitHub — version control, project tracking, and
+            collaborative development workflows.
           </p>
         </div>
       </div>
@@ -299,6 +459,49 @@
       </div>
     </section>
 
+    <div
+      class="project__lightbox"
+      id="project-lightbox"
+      hidden
+      aria-hidden="true"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Enlarged project screenshot"
+    >
+      <div class="project__lightbox-backdrop" data-lightbox-close></div>
+      <div class="project__lightbox-dialog">
+        <button
+          type="button"
+          class="project__lightbox-close"
+          aria-label="Close enlarged image"
+          data-lightbox-close
+        >
+          <i class="ri-close-line"></i>
+        </button>
+        <button
+          type="button"
+          class="project__lightbox-nav project__lightbox-nav--prev"
+          aria-label="Previous image"
+          id="lightbox-prev"
+        >
+          <i class="ri-arrow-left-s-line"></i>
+        </button>
+        <button
+          type="button"
+          class="project__lightbox-nav project__lightbox-nav--next"
+          aria-label="Next image"
+          id="lightbox-next"
+        >
+          <i class="ri-arrow-right-s-line"></i>
+        </button>
+        <figure class="project__lightbox-figure">
+          <img class="project__lightbox-img" src="" alt="" />
+          <figcaption class="project__lightbox-caption"></figcaption>
+        </figure>
+        <p class="project__lightbox-counter" id="lightbox-counter" hidden></p>
+      </div>
+    </div>
+
     <footer class="footer">
       <div class="section__container footer__container">
         <div class="footer__col">
@@ -308,11 +511,9 @@
             for turning lines of code into captivating online experiences.
           </p>
           <div class="footer__socials">
-            <a href="#"><i class="ri-mail-fill"></i></a>
-            <a href="#"><i class="ri-github-fill"></i></a>
-            <a href="#"><i class="ri-linkedin-fill"></i></a>
-            <a href="#"><i class="ri-twitter-fill"></i></a>
-            <a href="#"><i class="ri-dribbble-line"></i></a>
+            <a href="mailto:mulaudzimash12@gmail.com"><i class="ri-mail-fill"></i></a>
+            <a href="https://github.com/MashuduWiz"><i class="ri-github-fill"></i></a>
+            <a href="https://www.linkedin.com/in/mashudu-mulaudzi-00a325256/"><i class="ri-linkedin-fill"></i></a>
           </div>
         </div>
         <div class="footer__col">
@@ -339,7 +540,6 @@
       </div>
     </footer>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mixitup/3.3.1/mixitup.min.js"></script>
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script src="main.js"></script>
