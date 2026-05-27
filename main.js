@@ -298,8 +298,8 @@ ScrollReveal().reveal(".about__btns", {
   delay: 2000,
 });
 
-// service container
-ScrollReveal().reveal(".service__card", {
+// skills container
+ScrollReveal().reveal(".skills__card", {
   duration: 1000,
   interval: 500,
 });
