@@ -121,23 +121,51 @@
         <h2 class="section__header project__title">My Projects</h2>
         <div class="project__filters">
           <button class="project__filter-btn active" data-filter="all">All</button>
-          <button class="project__filter-btn" data-filter="web-app">Web Apps</button>
-          <button class="project__filter-btn" data-filter="game">Games</button>
+          <button class="project__filter-btn" data-filter="web-app">Web & Apps</button>
+          <button class="project__filter-btn" data-filter="softwares">Softwares</button>
           <button class="project__filter-btn" data-filter="design">Designs</button>
         </div>
       </div>
 
       <div class="project__grid" id="projects-grid">
         <article class="project__card" data-cat="web-app">
-          <div class="project__card-media">
-            <img
-              src="Images/Rivoni home page.png"
-              alt="Rivoni Society for the Blind Website screenshot"
-              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
-            />
-            <div class="project__media-placeholder" style="display: none">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
-              Add your screenshot here
+          <div class="project__card-media project__card-media--slideshow">
+            <div class="project__slideshow" data-autoplay="5000">
+              <div class="project__slideshow-track">
+                <div class="project__slide">
+                  <img
+                    src="Images/Screenshot 2026-06-17 102436.png"
+                    alt="Rivoni Society for the Blind website screenshot 1"
+                  />
+                </div>
+                <div class="project__slide">
+                  <img
+                    src="Images/Screenshot 2026-06-17 102456.png"
+                    alt="Rivoni Society for the Blind website screenshot 2"
+                  />
+                </div>
+                <div class="project__slide">
+                  <img
+                    src="Images/Screenshot 2026-06-17 102518.png"
+                    alt="Rivoni Society for the Blind website screenshot 3"
+                  />
+                </div>
+              </div>
+              <button
+                type="button"
+                class="project__slideshow-btn project__slideshow-btn--prev"
+                aria-label="Previous screenshot"
+              >
+                <i class="ri-arrow-left-s-line"></i>
+              </button>
+              <button
+                type="button"
+                class="project__slideshow-btn project__slideshow-btn--next"
+                aria-label="Next screenshot"
+              >
+                <i class="ri-arrow-right-s-line"></i>
+              </button>
+              <div class="project__slideshow-dots" role="tablist" aria-label="Screenshot slides"></div>
             </div>
             <span class="project__status-badge project__status-badge--live">Live</span>
           </div>
@@ -151,7 +179,7 @@
               <span class="project__tag">Bootstrap</span>
             </div>
             <div class="project__card-actions">
-              <a href="#" class="project__action-btn project__action-btn--primary" target="_blank" rel="noopener noreferrer">
+              <a href="https://rivonisocietyfortheblind.site/" class="project__action-btn project__action-btn--primary" target="_blank" rel="noopener noreferrer">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
                 Live Demo
               </a>
@@ -202,7 +230,7 @@
               </button>
               <div class="project__slideshow-dots" role="tablist" aria-label="Screenshot slides"></div>
             </div>
-            <span class="project__status-badge project__status-badge--live">Live</span>
+            <span class="project__status-badge project__status-badge--live"></span>
           </div>
           <div class="project__card-body">
             <h3 class="project__card-title">Inventory Management System (Web Dashboard)</h3>
@@ -214,10 +242,18 @@
               <span class="project__tag">Vue.js</span>
             </div>
             <div class="project__card-actions">
-              <a href="#" class="project__action-btn project__action-btn--primary" target="_blank" rel="noopener noreferrer">
+              <button
+                type="button"
+                class="project__action-btn project__action-btn--primary"
+                data-project-details-btn
+                data-project-title="Inventory Management System (Web Dashboard)"
+                data-project-summary="A web-based inventory dashboard built with Vue.js and Firebase for real-time stock updates and reporting."
+                data-project-stack="Vue.js, JavaScript, Firebase, HTML, CSS"
+                data-project-highlights="Real-time inventory sync|Category and stock tracking|Responsive dashboard UI|Cross-platform integration readiness"
+              >
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-                Live Demo
-              </a>
+                Project Details
+              </button>
               <a href="#" class="project__action-btn" target="_blank" rel="noopener noreferrer">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
                 GitHub
@@ -237,7 +273,7 @@
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
               Add your screenshot here
             </div>
-            <span class="project__status-badge project__status-badge--wip">In Progress</span>
+            <span class="project__status-badge project__status-badge--wip"></span>
           </div>
           <div class="project__card-body">
             <h3 class="project__card-title">Inventory Management Mobile App (Ionic)</h3>
@@ -249,10 +285,18 @@
               <span class="project__tag">Ionic</span>
             </div>
             <div class="project__card-actions">
-              <a href="#" class="project__action-btn project__action-btn--primary" target="_blank" rel="noopener noreferrer">
+              <button
+                type="button"
+                class="project__action-btn project__action-btn--primary"
+                data-project-details-btn
+                data-project-title="Inventory Management Mobile App (Ionic)"
+                data-project-summary="A cross-platform mobile app built with Ionic and TypeScript that connects to the web inventory platform and syncs data in real time."
+                data-project-stack="Ionic, TypeScript, HTML, CSS, Firebase, REST APIs"
+                data-project-highlights="Cross-platform mobile support|Real-time data sync with web dashboard|Inventory updates on the go|API and Firebase integration"
+              >
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-                Live Demo
-              </a>
+                Project Details
+              </button>
               <a href="#" class="project__action-btn" target="_blank" rel="noopener noreferrer">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
                 GitHub
@@ -306,7 +350,7 @@
               </button>
               <div class="project__slideshow-dots" role="tablist" aria-label="Screenshot slides"></div>
             </div>
-            <span class="project__status-badge project__status-badge--live">Live</span>
+            <span class="project__status-badge project__status-badge--live"></span>
           </div>
           <div class="project__card-body">
             <h3 class="project__card-title">Wordpress website design</h3>
@@ -318,6 +362,84 @@
               <a href="#" class="project__action-btn project__action-btn--primary" target="_blank" rel="noopener noreferrer">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
                 View Design
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project__card" data-cat="softwares">
+          <div class="project__card-media project__card-media--slideshow">
+            <div class="project__slideshow" data-autoplay="5000">
+              <div class="project__slideshow-track">
+                <div class="project__slide is-active">
+                  <img
+                    src="Images/Church admin pic.png"
+                    alt="WordPress website design screenshot 1"
+                  />
+                </div>
+                <div class="project__slide">
+                  <img
+                    src="Images/Members.png"
+                    alt="Church admin system screenshot 2"
+                  />
+                </div>
+                <div class="project__slide">
+                  <img
+                    src="Images/Finance.png"
+                    alt="Church admin system screenshot 3"
+                  />
+                </div>
+                <div class="project__slide">
+                  <img
+                    src="Images/Events.png"
+                    alt="Church admin system screenshot 4"
+                  />
+                </div>
+              </div>
+              <button
+                type="button"
+                class="project__slideshow-btn project__slideshow-btn--prev"
+                aria-label="Previous screenshot"
+              >
+                <i class="ri-arrow-left-s-line"></i>
+              </button>
+              <button
+                type="button"
+                class="project__slideshow-btn project__slideshow-btn--next"
+                aria-label="Next screenshot"
+              >
+                <i class="ri-arrow-right-s-line"></i>
+              </button>
+              <div class="project__slideshow-dots" role="tablist" aria-label="Screenshot slides"></div>
+            </div>
+            <span class="project__status-badge project__status-badge--wip">In Progress</span>
+          </div>
+          <div class="project__card-body">
+            <h3 class="project__card-title">Church Admin System</h3>
+            <p class="project__card-desc">Church admin systems is software that helps church administrators manage their church's activities and resources.</p>
+            <div class="project__tags">
+              <span class="project__tag">Electron.js</span>
+              <span class="project__tag">React</span>
+              <span class="project__tag">Tailwind CSS</span>
+              <span class="project__tag">javascript</span>
+              <span class="project__tag">SQLite</span>
+            </div>
+            <div class="project__card-actions">
+              <button
+                type="button"
+                class="project__action-btn project__action-btn--primary"
+                data-project-details-btn
+                data-project-title="Church Admin System"
+                data-project-summary="A cross-platform desktop application that helps church administrators manage members, finances, events, and day-to-day church operations."
+                data-project-stack="Electron.js, React, Tailwind CSS, JavaScript, SQLite"
+                data-project-highlights="Member management module|Finance tracking and reporting|Events scheduling and management|Offline-first desktop app with SQLite storage"
+              >
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                Project Details
+              </button>
+              <a href="#" class="project__action-btn" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                GitHub
               </a>
             </div>
           </div>
@@ -419,40 +541,54 @@
       <p class="section__description contact__intro">
         Have a project in mind or want to collaborate? Send me a message and I’ll get back to you soon.
       </p>
-      <div class="contact__form-wrapper">
-        <form action="/" class="contact__form">
-          <div class="contact__row">
-            <div class="contact__field">
-              <input type="text" id="firstName" name="firstName" placeholder=" " autocomplete="given-name" />
-              <label for="firstName">First Name</label>
-              <span class="contact__focus-line"></span>
-            </div>
-            <div class="contact__field">
-              <input type="text" id="lastName" name="lastName" placeholder=" " autocomplete="family-name" />
-              <label for="lastName">Last Name</label>
-              <span class="contact__focus-line"></span>
+      <div class="contact__info-wrapper">
+        <div class="contact__info-grid">
+          <div class="contact__info-item">
+            <span><i class="ri-mail-fill"></i></span>
+            <div>
+              <h4>Email</h4>
+              <a href="mailto:mulaudzimash12@gmail.com">mulaudzimash12@gmail.com</a>
             </div>
           </div>
-          <div class="contact__field">
-            <input type="email" id="email" name="email" placeholder=" " autocomplete="email" />
-            <label for="email">Email</label>
-            <span class="contact__focus-line"></span>
+          <div class="contact__info-item">
+            <span><i class="ri-phone-fill"></i></span>
+            <div>
+              <h4>Phone / WhatsApp</h4>
+              <a href="tel:+27723086730">+27 72 308 6730</a>
+            </div>
           </div>
-          <div class="contact__field">
-            <input type="text" id="subject" name="subject" placeholder=" " />
-            <label for="subject">Subject</label>
-            <span class="contact__focus-line"></span>
+          <div class="contact__info-item">
+            <span><i class="ri-map-pin-2-fill"></i></span>
+            <div>
+              <h4>Location</h4>
+              <p>South Africa</p>
+            </div>
           </div>
-          <div class="contact__field contact__field--textarea">
-            <textarea id="message" name="message" placeholder=" " rows="5"></textarea>
-            <label for="message">Your Message</label>
-            <span class="contact__focus-line"></span>
-          </div>
-          <button type="submit" class="btn contact__submit">
-            <span>Send Message</span>
-            <i class="ri-send-plane-fill"></i>
-          </button>
-        </form>
+        </div>
+        <div class="contact__actions">
+          <a
+            href="https://wa.me/27723086730?text=Hi%20Mashudu%2C%20I%20would%20like%20to%20work%20with%20you."
+            class="btn contact__action-btn"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i class="ri-whatsapp-line"></i>
+            Chat on WhatsApp
+          </a>
+          <a href="mailto:mulaudzimash12@gmail.com" class="btn contact__action-btn contact__action-btn--ghost">
+            <i class="ri-mail-send-line"></i>
+            Send Email
+          </a>
+          <a
+            href="https://www.linkedin.com/in/mashudu-mulaudzi-00a325256/"
+            class="btn contact__action-btn contact__action-btn--ghost"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i class="ri-linkedin-fill"></i>
+            Connect on LinkedIn
+          </a>
+        </div>
       </div>
     </section>
 
@@ -496,6 +632,38 @@
           <figcaption class="project__lightbox-caption"></figcaption>
         </figure>
         <p class="project__lightbox-counter" id="lightbox-counter" hidden></p>
+      </div>
+    </div>
+
+    <div
+      class="project__details-modal"
+      id="project-details-modal"
+      hidden
+      aria-hidden="true"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="project-details-title"
+    >
+      <div class="project__details-backdrop" data-project-details-close></div>
+      <div class="project__details-dialog">
+        <button
+          type="button"
+          class="project__details-close"
+          aria-label="Close project details"
+          data-project-details-close
+        >
+          <i class="ri-close-line"></i>
+        </button>
+        <h3 id="project-details-title" class="project__details-title"></h3>
+        <p id="project-details-summary" class="project__details-summary"></p>
+        <p class="project__details-stack">
+          <strong>Tech Stack:</strong>
+          <span id="project-details-stack"></span>
+        </p>
+        <div>
+          <h4 class="project__details-subtitle">Highlights</h4>
+          <ul id="project-details-highlights" class="project__details-list"></ul>
+        </div>
       </div>
     </div>
 
