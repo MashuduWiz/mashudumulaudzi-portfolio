@@ -17,7 +17,7 @@ navLinks.addEventListener("click", (e) => {
   menuBtnIcon.setAttribute("class", "ri-menu-3-line");
 });
 
-// Projects filter
+
 const projectFilterBtns = document.querySelectorAll(".project__filter-btn");
 const projectCards = document.querySelectorAll(".project__card[data-cat]");
 const projectsEmpty = document.getElementById("projects-empty");
@@ -44,7 +44,7 @@ if (projectFilterBtns.length && projectCards.length) {
   });
 }
 
-// Project card slideshows
+
 document.querySelectorAll(".project__slideshow").forEach((slideshow) => {
   const slides = slideshow.querySelectorAll(".project__slide");
   const prevBtn = slideshow.querySelector(".project__slideshow-btn--prev");
@@ -118,7 +118,7 @@ document.querySelectorAll(".project__slideshow").forEach((slideshow) => {
   startAutoplay();
 });
 
-// Project image lightbox
+
 const projectLightbox = document.getElementById("project-lightbox");
 const lightboxImg = projectLightbox?.querySelector(".project__lightbox-img");
 const lightboxCaption = projectLightbox?.querySelector(".project__lightbox-caption");
@@ -233,6 +233,57 @@ if (projectLightbox && lightboxImg) {
   });
 }
 
+
+const projectDetailsModal = document.getElementById("project-details-modal");
+const projectDetailsTitle = document.getElementById("project-details-title");
+const projectDetailsSummary = document.getElementById("project-details-summary");
+const projectDetailsStack = document.getElementById("project-details-stack");
+const projectDetailsHighlights = document.getElementById("project-details-highlights");
+const projectDetailsButtons = document.querySelectorAll("[data-project-details-btn]");
+
+if (projectDetailsModal && projectDetailsButtons.length) {
+  const closeProjectDetails = () => {
+    projectDetailsModal.hidden = true;
+    projectDetailsModal.setAttribute("aria-hidden", "true");
+    document.body.classList.remove("project-details-open");
+  };
+
+  const openProjectDetails = (btn) => {
+    const title = btn.dataset.projectTitle || "Project Details";
+    const summary = btn.dataset.projectSummary || "";
+    const stack = btn.dataset.projectStack || "";
+    const highlights = (btn.dataset.projectHighlights || "")
+      .split("|")
+      .map((item) => item.trim())
+      .filter(Boolean);
+
+    projectDetailsTitle.textContent = title;
+    projectDetailsSummary.textContent = summary;
+    projectDetailsStack.textContent = stack;
+    projectDetailsHighlights.innerHTML = highlights
+      .map((item) => `<li>${item}</li>`)
+      .join("");
+
+    projectDetailsModal.hidden = false;
+    projectDetailsModal.setAttribute("aria-hidden", "false");
+    document.body.classList.add("project-details-open");
+  };
+
+  projectDetailsButtons.forEach((btn) => {
+    btn.addEventListener("click", () => openProjectDetails(btn));
+  });
+
+  projectDetailsModal
+    .querySelectorAll("[data-project-details-close]")
+    .forEach((el) => el.addEventListener("click", closeProjectDetails));
+
+  document.addEventListener("keydown", (e) => {
+    if (!projectDetailsModal.hidden && e.key === "Escape") {
+      closeProjectDetails();
+    }
+  });
+}
+
 const swiper = new Swiper(".swiper", {
   loop: true,
   pagination: {
@@ -247,7 +298,7 @@ const scrollRevealOption = {
   duration: 1000,
 };
 
-// header container
+
 ScrollReveal().reveal(".header__image img", {
   ...scrollRevealOption,
 });
@@ -272,7 +323,7 @@ ScrollReveal().reveal(".header__content .btn", {
   delay: 2000,
 });
 
-// about container
+
 ScrollReveal().reveal(".about__image img", {
   ...scrollRevealOption,
   origin: "left",
@@ -298,19 +349,19 @@ ScrollReveal().reveal(".about__btns", {
   delay: 2000,
 });
 
-// skills container
+
 ScrollReveal().reveal(".skills__card", {
   duration: 1000,
   interval: 500,
 });
 
-// blog container
+
 ScrollReveal().reveal(".blog__card", {
   ...scrollRevealOption,
   interval: 500,
 });
 
-// contact container
+
 ScrollReveal().reveal(".contact__container .section__subheader", {
   ...scrollRevealOption,
   delay: 200,
@@ -323,7 +374,7 @@ ScrollReveal().reveal(".contact__intro", {
   ...scrollRevealOption,
   delay: 600,
 });
-ScrollReveal().reveal(".contact__form-wrapper", {
+ScrollReveal().reveal(".contact__info-wrapper", {
   ...scrollRevealOption,
   delay: 400,
   duration: 800,
