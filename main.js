@@ -210,6 +210,25 @@ if (projectLightbox && lightboxImg) {
     });
   });
 
+  document.querySelectorAll("[data-lightbox-trigger]").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const card = btn.closest(".project__card");
+      const media = card?.querySelector(".project__card-media");
+      if (!media) return;
+
+      const imgs = [...media.querySelectorAll("img")].filter(
+        (img) => img.src && getComputedStyle(img).display !== "none"
+      );
+      if (!imgs.length) return;
+
+      const activeImg =
+        media.querySelector(".project__slide.is-active img") || imgs[0];
+      const startIndex = imgs.indexOf(activeImg);
+
+      openLightbox(imgs, Math.max(0, startIndex));
+    });
+  });
+
   projectLightbox.querySelectorAll("[data-lightbox-close]").forEach((el) => {
     el.addEventListener("click", closeLightbox);
   });
