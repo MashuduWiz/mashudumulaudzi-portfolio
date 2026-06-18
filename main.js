@@ -255,30 +255,33 @@ if (projectLightbox && lightboxImg) {
 
 const projectDetailsModal = document.getElementById("project-details-modal");
 const projectDetailsTitle = document.getElementById("project-details-title");
-const projectDetailsBody = document.getElementById("project-details-body");
+const projectDetailsSummary = document.getElementById("project-details-summary");
+const projectDetailsStack = document.getElementById("project-details-stack");
+const projectDetailsHighlights = document.getElementById("project-details-highlights");
 const projectDetailsButtons = document.querySelectorAll("[data-project-details-btn]");
 
-if (projectDetailsModal && projectDetailsBody && projectDetailsButtons.length) {
+if (projectDetailsModal && projectDetailsButtons.length) {
   const closeProjectDetails = () => {
     projectDetailsModal.hidden = true;
     projectDetailsModal.setAttribute("aria-hidden", "true");
     document.body.classList.remove("project-details-open");
-    projectDetailsBody.innerHTML = "";
   };
 
   const openProjectDetails = (btn) => {
-    const card = btn.closest(".project__card");
-    const template = card?.querySelector(".project__details-template");
-    const title =
-      card?.querySelector(".project__card-title")?.textContent?.trim() ||
-      "Project Details";
+    const title = btn.dataset.projectTitle || "Project Details";
+    const summary = btn.dataset.projectSummary || "";
+    const stack = btn.dataset.projectStack || "";
+    const highlights = (btn.dataset.projectHighlights || "")
+      .split("|")
+      .map((item) => item.trim())
+      .filter(Boolean);
 
     projectDetailsTitle.textContent = title;
-    projectDetailsBody.innerHTML = "";
-
-    if (template?.content) {
-      projectDetailsBody.appendChild(template.content.cloneNode(true));
-    }
+    projectDetailsSummary.textContent = summary;
+    projectDetailsStack.textContent = stack;
+    projectDetailsHighlights.innerHTML = highlights
+      .map((item) => `<li>${item}</li>`)
+      .join("");
 
     projectDetailsModal.hidden = false;
     projectDetailsModal.setAttribute("aria-hidden", "false");
@@ -306,8 +309,7 @@ const swiper = new Swiper(".swiper", {
     el: ".swiper-pagination",
   },
 });
-
-
+66660
 
 const scrollRevealOption = {
   distance: "50px",

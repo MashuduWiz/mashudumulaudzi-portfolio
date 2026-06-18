@@ -245,6 +245,10 @@
                 type="button"
                 class="project__action-btn project__action-btn--primary"
                 data-project-details-btn
+                data-project-title="Inventory Management System (Web Dashboard)"
+                data-project-summary="A web-based inventory dashboard built with Vue.js and Firebase for real-time stock updates and reporting."
+                data-project-stack="Vue.js, JavaScript, Firebase, HTML, CSS"
+                data-project-highlights="Real-time inventory sync|Category and stock tracking|Responsive dashboard UI|Cross-platform integration readiness"
               >
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
                 Project Details
@@ -255,27 +259,6 @@
               </a>
             </div>
           </div>
-
-          <template class="project__details-template">
-            <p class="project__details-summary">
-              A web-based inventory dashboard built with Vue.js and Firebase for real-time stock updates and reporting.
-            </p>
-
-            <div class="project__details-section">
-              <h4 class="project__details-subtitle">Tech Stack</h4>
-              <p>Vue.js, JavaScript, Firebase, HTML, CSS</p>
-            </div>
-
-            <div class="project__details-section">
-              <h4 class="project__details-subtitle">Highlights</h4>
-              <ul class="project__details-list">
-                <li>Real-time inventory sync</li>
-                <li>Category and stock tracking</li>
-                <li>Responsive dashboard UI</li>
-                <li>Cross-platform integration readiness</li>
-              </ul>
-            </div>
-          </template>
         </article>
 
         <article class="project__card" data-cat="web-app">
@@ -305,6 +288,10 @@
                 type="button"
                 class="project__action-btn project__action-btn--primary"
                 data-project-details-btn
+                data-project-title="Inventory Management Mobile App (Ionic)"
+                data-project-summary="A cross-platform mobile app built with Ionic and TypeScript that connects to the web inventory platform and syncs data in real time."
+                data-project-stack="Ionic, TypeScript, HTML, CSS, Firebase, REST APIs"
+                data-project-highlights="Cross-platform mobile support|Real-time data sync with web dashboard|Inventory updates on the go|API and Firebase integration"
               >
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
                 Project Details
@@ -315,27 +302,6 @@
               </a>
             </div>
           </div>
-
-          <template class="project__details-template">
-            <p class="project__details-summary">
-              A cross-platform mobile app built with Ionic and TypeScript that connects to the web inventory platform and syncs data in real time.
-            </p>
-
-            <div class="project__details-section">
-              <h4 class="project__details-subtitle">Tech Stack</h4>
-              <p>Ionic, TypeScript, HTML, CSS, Firebase, REST APIs</p>
-            </div>
-
-            <div class="project__details-section">
-              <h4 class="project__details-subtitle">Highlights</h4>
-              <ul class="project__details-list">
-                <li>Cross-platform mobile support</li>
-                <li>Real-time data sync with web dashboard</li>
-                <li>Inventory updates on the go</li>
-                <li>API and Firebase integration</li>
-              </ul>
-            </div>
-          </template>
         </article>
 
         <article class="project__card" data-cat="design">
@@ -462,6 +428,10 @@
                 type="button"
                 class="project__action-btn project__action-btn--primary"
                 data-project-details-btn
+                data-project-title="Church Admin System"
+                data-project-summary="A cross-platform desktop application that helps church administrators manage members, finances, events, and day-to-day church operations."
+                data-project-stack="Electron.js, React, Tailwind CSS, JavaScript, SQLite"
+                data-project-highlights="Member management module|Finance tracking and reporting|Events scheduling and management|Offline-first desktop app with SQLite storage"
               >
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
                 Project Details
@@ -472,27 +442,6 @@
               </a>
             </div>
           </div>
-
-          <template class="project__details-template">
-            <p class="project__details-summary">
-              A cross-platform desktop application that helps church administrators manage members, finances, events, and day-to-day church operations.
-            </p>
-
-            <div class="project__details-section">
-              <h4 class="project__details-subtitle">Tech Stack</h4>
-              <p>Electron.js, React, Tailwind CSS, JavaScript, SQLite</p>
-            </div>
-
-            <div class="project__details-section">
-              <h4 class="project__details-subtitle">Highlights</h4>
-              <ul class="project__details-list">
-                <li>Member management module</li>
-                <li>Finance tracking and reporting</li>
-                <li>Events scheduling and management</li>
-                <li>Offline-first desktop app with SQLite storage</li>
-              </ul>
-            </div>
-          </template>
         </article>
 
         <p class="project__empty" id="projects-empty">No projects in this category yet.</p>
@@ -706,7 +655,15 @@
           <i class="ri-close-line"></i>
         </button>
         <h3 id="project-details-title" class="project__details-title"></h3>
-        <div id="project-details-body" class="project__details-body"></div>
+        <p id="project-details-summary" class="project__details-summary"></p>
+        <p class="project__details-stack">
+          <strong>Tech Stack:</strong>
+          <span id="project-details-stack"></span>
+        </p>
+        <div>
+          <h4 class="project__details-subtitle">Highlights</h4>
+          <ul id="project-details-highlights" class="project__details-list"></ul>
+        </div>
       </div>
     </div>
 

@@ -793,10 +793,7 @@ body.lightbox-open {
 .project__details-dialog {
   position: relative;
   z-index: 1;
-  display: flex;
-  flex-direction: column;
   width: min(92vw, 620px);
-  max-height: min(90vh, 720px);
   padding: 1.4rem 1.25rem 1.2rem;
   background: linear-gradient(
     145deg,
@@ -833,29 +830,10 @@ body.lightbox-open {
 }
 
 .project__details-title {
-  flex-shrink: 0;
   margin-bottom: 0.65rem;
   padding-right: 2.5rem;
   font-size: 1.3rem;
   font-weight: 700;
-}
-
-.project__details-body {
-  flex: 1;
-  min-height: 0;
-  overflow-y: auto;
-  padding-right: 0.15rem;
-}
-
-.project__details-section {
-  margin-bottom: 0.95rem;
-  font-size: 0.88rem;
-  line-height: 1.55;
-  color: var(--text-light);
-}
-
-.project__details-section:last-child {
-  margin-bottom: 0;
 }
 
 .project__details-summary {
