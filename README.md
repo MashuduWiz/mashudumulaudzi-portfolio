@@ -4,7 +4,7 @@ This is my personal developer portfolio showcasing my skills, projects, and expe
 
 ## 🚀 Live Website
 Visit my portfolio here:  
-https://your-custom-domain.com (or GitHub Pages link)
+https://mashudumulaudzi.co.za/ 
 
 ---
 
